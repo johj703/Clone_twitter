@@ -1,7 +1,13 @@
-import React from "react";
+import type { NextPage } from "next";
 
-export default () => (
-  <div>
-    <h1>Hello</h1>
-  </div>
-);
+const Enter: NextPage = () => {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="grid w-full grid-cols-2 mt-8 border-b">
+        <button>로그인</button>
+        <button>회원가입</button>
+      </div>
+    </div>
+  );
+};
+export default Enter;
