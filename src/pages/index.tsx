@@ -15,6 +15,10 @@ const Enter: NextPage = () => {
     reset();
     setMethod("login");
   };
+  const onCreateAcctountClick = () => {
+    reset();
+    setMethod("create_account");
+  };
   return (
     <div className="flex flex-col items-center">
       <div className="grid w-full grid-cols-2 mt-8 border-b">
@@ -29,7 +33,17 @@ const Enter: NextPage = () => {
         >
           로그인
         </button>
-        <button>회원가입</button>
+        <button
+          className={cls(
+            "pb-4 font-medium text-sm border-b-2",
+            method === "create_account"
+              ? "border-sky-500 text-sky-500"
+              : "border-transparent hover:text-gray-400 text-gray-500"
+          )}
+          onClick={onCreateAcctountClick}
+        >
+          회원가입
+        </button>
       </div>
     </div>
   );
